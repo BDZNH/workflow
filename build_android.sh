@@ -10,9 +10,9 @@ set -e
 # arm64 <--> arm64-v8a
 # arm   <--> armdabi-v7a
 # x86   <--> x86
-# x86   <--> x86_64
-ANDROID_ABI_ARCH=arm64
-ANDROID_ABI=arm64-v8a
+# x86_64   <--> x86_64
+ANDROID_ABI_ARCH=x86
+ANDROID_ABI=x86
 ANDROID_API_LEVEL=26
 OPEN_SSL_VERSION=1.1.1l
 OPEN_SSL_DIR=
@@ -43,12 +43,12 @@ function build_openssl()
 {
     if [ ! -f openssl-${OPEN_SSL_VERSION}.tar.gz ]; then
         wget https://www.openssl.org/source/openssl-${OPEN_SSL_VERSION}.tar.gz
-        tar -xvf openssl-${OPEN_SSL_VERSION}.tar.gz -C .
+        tar -xf openssl-${OPEN_SSL_VERSION}.tar.gz -C .
     fi
 
-    if [ ! -d openssl-${OPEN_SSL_VERSION} ]; then
-        echo not found directory openssl-${OPEN_SSL_VERSION}
-        exit 1
+    if [ -d openssl-${OPEN_SSL_VERSION} ]; then
+	rm -rf openssl-${OPEN_SSL_VERSION}
+        tar -xf openssl-${OPEN_SSL_VERSION}.tar.gz -C .
     fi
 
     OPEN_SSL_DIR=`realpath openssl-${OPEN_SSL_VERSION}`
