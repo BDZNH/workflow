@@ -1,0 +1,142 @@
+cc_defaults{
+    name: "libworkflow_test_link_defaults",
+    vendor: true,
+    static_libs: [
+        "libworkflow",
+        "libssl_prebuilt_static", 
+        "libcrypto_prebuilt_static",
+        "libgtest",
+    ],
+    cflags: [
+        "-Wno-unused-parameter",
+        "-Wno-unused-function",
+        "-Wno-implicit-fallthrough",
+        "-Wno-invalid-source-encoding",
+        "-Wall",
+        "-fPIC",
+        "-pipe",
+        "-std=c++11",
+        "-fno-exceptions",
+    ],
+    rtti: true,
+}
+
+cc_binary{
+    name: "algo_unittest",
+    srcs: [
+        "algo_unittest.cc",
+    ],
+    defaults: [
+        "libworkflow_test_link_defaults",
+    ],
+}
+
+cc_binary{
+    name: "dns_unittest",
+    srcs: [
+        "dns_unittest.cc",
+    ],
+    defaults: [
+        "libworkflow_test_link_defaults",
+    ],
+}
+
+cc_binary{
+    name: "facilities_unittest",
+    srcs: [
+        "facilities_unittest.cc",
+    ],
+    defaults: [
+        "libworkflow_test_link_defaults",
+    ],
+}
+
+cc_binary{
+    name: "graph_unittest",
+    srcs: [
+        "graph_unittest.cc",
+    ],
+    defaults: [
+        "libworkflow_test_link_defaults",
+    ],
+}
+
+cc_binary{
+    name: "http_unittest",
+    srcs: [
+        "http_unittest.cc",
+    ],
+    defaults: [
+        "libworkflow_test_link_defaults",
+    ],
+}
+
+cc_binary{
+    name: "memory_unittest",
+    srcs: [
+        "memory_unittest.cc",
+    ],
+    defaults: [
+        "libworkflow_test_link_defaults",
+    ],
+}
+
+cc_binary{
+    name: "mysql_unittest",
+    srcs: [
+        "mysql_unittest.cc",
+    ],
+    defaults: [
+        "libworkflow_test_link_defaults",
+    ],
+}
+
+cc_binary{
+    name: "redis_unittest",
+    srcs: [
+        "redis_unittest.cc",
+    ],
+    defaults: [
+        "libworkflow_test_link_defaults",
+    ],
+}
+
+cc_binary{
+    name: "resource_unittest",
+    srcs: [
+        "resource_unittest.cc",
+    ],
+    defaults: [
+        "libworkflow_test_link_defaults",
+    ],
+}
+
+cc_binary{
+    name: "task_unittest",
+    srcs: [
+        "task_unittest.cc",
+    ],
+    defaults: [
+        "libworkflow_test_link_defaults",
+    ],
+}
+
+cc_binary{
+    name: "upstream_unittest",
+    srcs: [
+        "upstream_unittest.cc",
+    ],
+    defaults: [
+        "libworkflow_test_link_defaults",
+    ],
+}
+
+cc_binary{
+    name: "uriparser_unittest",
+    srcs: [
+        "uriparser_unittest.cc",
+    ],
+    defaults: [
+        "libworkflow_test_link_defaults",
+    ],
+}
