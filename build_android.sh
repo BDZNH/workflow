@@ -8,11 +8,11 @@ set -e
 
 #  arch        abi
 # arm64 <--> arm64-v8a
-# arm   <--> armdabi-v7a
+# arm   <--> armeabi-v7a
 # x86   <--> x86
 # x86_64   <--> x86_64
-ANDROID_ABI_ARCH=x86
-ANDROID_ABI=x86
+ANDROID_ABI_ARCH=arm64
+ANDROID_ABI=arm64-v8a
 ANDROID_API_LEVEL=26
 OPEN_SSL_VERSION=1.1.1l
 OPEN_SSL_DIR=
