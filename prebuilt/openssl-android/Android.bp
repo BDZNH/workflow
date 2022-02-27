@@ -1,0 +1,127 @@
+cc_prebuilt_library_shared{
+    name: "libssl_prebuilt",
+    vendor_available: true,
+    export_include_dirs: [
+        "include",
+    ],
+    target: {
+        android_x86_64:{
+            srcs: [
+                "x86_64/libssl.so",
+            ],
+        },
+        android_x86:{
+            srcs: [
+                "x86/libssl.so",
+            ],
+        },
+        android_arm:{
+            srcs:[
+                "arm/libssl.so",
+            ],
+        },
+        android_arm64:{
+            srcs:[
+                "arm64/libssl.so",
+            ],
+        },
+    },
+}
+
+cc_prebuilt_library_shared{
+    name: "libcrypto_prebuilt",
+    vendor_available: true,
+    export_include_dirs: [
+        "include",
+    ],
+    target: {
+        android_x86_64:{
+            srcs: [
+                "x86_64/libcrypto.so",
+            ],
+        },
+        android_x86:{
+            srcs: [
+                "x86/libcrypto.so",
+            ],
+        },
+        android_arm:{
+            srcs:[
+                "arm/libssl.so",
+            ],
+        },
+        android_arm64:{
+            srcs:[
+                "arm64/libssl.so",
+            ],
+        },
+    },
+}
+
+cc_prebuilt_library_static{
+    name: "libssl_prebuilt_static",
+    vendor_available: true,
+    export_include_dirs: [
+        "include",
+    ],
+    target: {
+        android_x86_64:{
+            srcs: [
+                "x86_64/libssl.a",
+            ],
+        },
+        android_x86:{
+            srcs: [
+                "x86/libssl.a",
+            ],
+        },
+        android_arm:{
+            srcs:[
+                "arm/libssl.so",
+            ],
+        },
+        android_arm64:{
+            srcs:[
+                "arm64/libssl.so",
+            ],
+        },
+    },
+}
+
+cc_prebuilt_library_static{
+    name: "libcrypto_prebuilt_static",
+    vendor_available: true,
+    export_include_dirs: [
+        "include",
+    ],
+    target: {
+        android_x86_64:{
+            srcs: [
+                "x86_64/libcrypto.a",
+            ],
+        },
+        android_x86:{
+            srcs: [
+                "x86/libcrypto.a",
+            ],
+        },
+        android_arm:{
+            srcs:[
+                "arm/libssl.so",
+            ],
+        },
+        android_arm64:{
+            srcs:[
+                "arm64/libssl.so",
+            ],
+        },
+    },
+}
+
+cc_library_headers{
+    name: "libopenssl_headers",
+    vendor_available: true,
+    export_include_dirs: [
+        "include",
+    ],
+}
