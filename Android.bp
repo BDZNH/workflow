@@ -88,6 +88,7 @@ cc_defaults{
 cc_defaults{
     name: "libworkflow_mysql_defaults",
     srcs: [
+        "src/server/WFMySQLServer.cc",
         "src/client/WFMySQLConnection.cc",
         "src/factory/MySQLTaskImpl.cc",
         "src/protocol/MySQLMessage.cc",
