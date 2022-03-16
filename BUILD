@@ -224,7 +224,6 @@ cc_library(
 	hdrs = [
 		'src/client/WFConsulClient.h',
 		'src/protocol/ConsulDataTypes.h',
-		'src/util/json_parser.h',
 	],
 	includes = [ 
 		'src/client',
@@ -234,7 +233,6 @@ cc_library(
 	],
 	srcs = [ 
 		'src/client/WFConsulClient.cc',
-		'src/util/json_parser.c',
 	],
 	deps = [
 		':common',
